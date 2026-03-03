@@ -24,12 +24,39 @@
             rel="stylesheet" 
             integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
             crossorigin="anonymous">
-
-        
     </head>
     <body>
-        {% block content %}
-        {% endblock content %}
+        <header>
+            <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">L&M</a>
+                    <button class="navbar-toggler" type="button" 
+                        data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+                        aria-controls="navbarNavAltMarkup" 
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav me-auto">
+                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link" href="#">Projects</a>
+                            <a class="nav-link" href="#">Engineering decisions</a>
+                            <a class="nav-link" href="#">Live API</a>
+                            <a class="nav-link" href="#">Contact</a>
+                        </div>
+                        <span class="navbar-text">
+                            Navbar text with an inline element
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            {% block content %}
+            {% endblock content %}
+        </main>
+        
     </body>
 
     <!-- Bootstrap Bundle with Popper -->
