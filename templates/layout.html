@@ -29,7 +29,7 @@
         <header>
             <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">L&M</a>
+                    <a class="navbar-brand" href="{{ url_for('homepage')}}">L&M</a>
                     <button class="navbar-toggler" type="button" 
                         data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
                         aria-controls="navbarNavAltMarkup" 
@@ -39,7 +39,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav me-auto">
-                            <a class="nav-link {% block home_active%}{% endblock home_active%}" href="#">Home</a>
+                            <a class="nav-link {% block home_active%}{% endblock home_active%}" href="{{ url_for('homepage')}}">Home</a>
                             <a class="nav-link {% block projects_active%}{% endblock projects_active%}" href="#">Projects</a>
                             <a class="nav-link {% block eng_decisions_active%}{% endblock eng_decisions_active%}" href="#">Engineering decisions</a>
                             <a class="nav-link {% block live_api_active%}{% endblock live_api_active%}" href="#">Live API</a>
@@ -54,7 +54,13 @@
             {% block content %}
             {% endblock content %}
         </main>
-        
+        <footer class="fixed-bottom mb-2">
+            <div class="container text-center">
+                <p class="text-body-secondary mb-0">
+                © <span id="year"></span> Liovirgilda Mendonça
+                </p>
+            </div>
+        </footer>
     </body>
 
     <!-- Bootstrap Bundle with Popper -->

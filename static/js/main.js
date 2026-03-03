@@ -10,3 +10,7 @@ const navbar_typing = new Typed('#typing-text', {
     backSpeed: 50,
     loop: true
   });
+
+// Footer copyright year 
+
+document.getElementById('year').textContent = new Date().getFullYear();
