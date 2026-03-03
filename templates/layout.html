@@ -39,11 +39,11 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav me-auto">
-                            <a class="nav-link" href="#">Home</a>
-                            <a class="nav-link" href="#">Projects</a>
-                            <a class="nav-link" href="#">Engineering decisions</a>
-                            <a class="nav-link" href="#">Live API</a>
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link {% block home_active%}{% endblock home_active%}" href="#">Home</a>
+                            <a class="nav-link {% block projects_active%}{% endblock projects_active%}" href="#">Projects</a>
+                            <a class="nav-link {% block eng_decisions_active%}{% endblock eng_decisions_active%}" href="#">Engineering decisions</a>
+                            <a class="nav-link {% block live_api_active%}{% endblock live_api_active%}" href="#">Live API</a>
+                            <a class="nav-link {% block contact_active%}{% endblock contact_active%}" href="#">Contact</a>
                         </div>
                         <span class="navbar-text">
                             Navbar text with an inline element
