@@ -27,8 +27,8 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
-                <div class="container-fluid">
+            <nav class="navbar bg-black navbar-expand-lg sticky-top" data-bs-theme="dark">
+                <div class="container-fluid ">
                     <a class="navbar-brand" href="{{ url_for('homepage')}}">L&M</a>
                     <button class="navbar-toggler" type="button" 
                         data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
@@ -38,7 +38,7 @@
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav me-auto">
+                        <div class="navbar-nav link-light me-auto">
                             <a class="nav-link {% block home_active%}{% endblock home_active %}" href="{{ url_for('homepage')}}">Home</a>
                             <a class="nav-link {% block projects_active%}{% endblock projects_active %}" href="#">Projects</a>
                             <a class="nav-link {% block eng_decisions_active%}{% endblock eng_decisions_active %}" href="#">Engineering decisions</a>
@@ -46,7 +46,6 @@
                             <a class="nav-link {% block contact_active%}{% endblock contact_active %}" href="#">Contact</a>
                         </div>
                         <div class="navbar_right">
-                            <span class="navbar-text" id="typing-text"></span>
                             <button id="theme-toggle" class="btn btn-outline-secondary btn-sm">🌚 Dark </button>
                         </div>
                     </div>
@@ -57,7 +56,7 @@
             {% block content %}
             {% endblock content %}
         </main>
-        <footer class="fixed-bottom mb-2">
+        <footer class="sticky-bottom mb-2">
             <div class="container text-center">
                 <p class="text-body-secondary mb-0">
                 © <span id="year"></span> Liovirgilda Mendonça
@@ -75,8 +74,5 @@
         integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" 
         crossorigin="anonymous"></script>
 
-    <!-- Typed.js -->
-    
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="{{ url_for('static', path= 'js/main.js')}}"></script>
 </html>
